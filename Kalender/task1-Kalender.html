@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 1 - Kalender</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div>
-        <h1>Kalender Maret 2025</h1>
+        <h1>
+            <button id="prev">&#9665</button>
+            Maret 2025
+            <button id="next">&#9655</button>
+        </h1>
         <table border="1">
-            <tr>
+            <tr class="tableHead">
                 <th>Minggu</th>
                 <th>Senin</th>
                 <th>Selasa</th>
@@ -50,7 +55,7 @@
                 <td>17</td>
                 <td>18</td>
                 <td>19</td>
-                <td>20</td>
+                <td class="highlight">20</td>
                 <td>21</td>
                 <td>22</td>
             </tr>
