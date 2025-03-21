@@ -1,0 +1,22 @@
+div {
+    text-align: center;
+}
+
+table {
+    border: 1px solid;
+    width: 50%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid;
+}
+
+.table-header {
+    background-color: rgba(128, 128, 128, 0.145);
+}
+
+.Kelipatan {
+    background-color: rgba(0, 255, 94, 0.151);
+}
