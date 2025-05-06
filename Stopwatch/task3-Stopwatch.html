@@ -9,11 +9,56 @@
 <body>
     <div class="stopwatch">
         <div class="timer">
-            <span class="minute">00</span>:<span class="second">00</span>:<span class="millisecond">00</span>
+            <span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">00</span>
         </div>
-        <button id="startButton">Mulai</button>
-        <button id="stopButton">Berhenti</button>
-        <button id="resetButton">Reset</button>
+        <button id="startButton" onclick="start()">Start</button>
+        <button id="stopButton" onclick="stop()">Stop</button>
+        <button id="resetButton" onclick="reset()">Reset</button>
     </div>
+
+    <script>
+        let minute = 0;
+        let second = 0;
+        let millisecond = 0;
+        let interval = null;
+
+        function show() {
+            const timerMinute = document.getElementById("minute").innerText = minute < 10 ? '0' + minute : minute;
+            const timerSecond = document.getElementById("second").innerText = second < 10 ? '0' + second : second;
+            const timerMillisecond = document.getElementById("millisecond").innerText = millisecond < 10 ? '0' + millisecond : millisecond;
+        }
+
+        function start() {
+            if (interval) return;
+
+            interval = setInterval(function() {
+                millisecond++;
+                if (millisecond >= 100) {
+                    millisecond = 0
+                    second++;
+                }
+                show()
+                if (second >= 60) {
+                    second = 0
+                    minute++;
+                }
+                show
+            }, 10)
+        }
+
+        function stop() {
+            clearInterval(interval);
+            interval = null;
+        }
+
+        function reset() {
+            clearInterval(interval);
+            interval = null
+            minute = 0;
+            second = 0;
+            millisecond = 0;
+            show()
+        }
+    </script>
 </body>
 </html>

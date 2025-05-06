@@ -57,14 +57,14 @@ button {
 }
 
 
-.minute {
+#minute {
     color: lightsalmon;
 }
 
-.second {
+#second {
     color: lightblue;
 }
 
-.millisecond {
+#millisecond {
     color: lightgreen;
 }
